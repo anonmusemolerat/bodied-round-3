@@ -1,0 +1,6 @@
+{
+  "name": "SpitFire Rap Battle & Studio",
+  "description": "Unleash your rhymes in next-gen rap battles. Craft, bundle, and sell tracks with interactive beats, customizable avatars, and a global leaderboard.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
