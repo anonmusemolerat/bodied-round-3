@@ -1,4 +1,6 @@
 import express from "express";
+// Security middleware for setting HTTP headers to protect against common web vulnerabilities
+import helmet from "helmet";
 import path from "path";
 import fs from "fs/promises";
 import { fileURLToPath } from "url";
@@ -434,6 +436,9 @@ function addAndBroadcastChatMessage(
 
 async function startServer() {
   const app = express();
+  // Apply Helmet middleware to set security HTTP headers (CSP, X-Frame-Options, HSTS, etc.)
+  // Protects against XSS, clickjacking, and enforces secure connections
+  app.use(helmet());
   app.use(express.json());
 
   // API 1: Fetch Profile
